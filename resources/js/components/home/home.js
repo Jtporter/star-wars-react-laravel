@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // COMPONENTS
-import Intro from "../intro/intro";
 import Card from "../card/card";
 // DATA
 import people from "../../data/dummyData";
@@ -33,7 +32,9 @@ export default class Layout extends Component {
     render() {
         return (
             <div>
-                <Intro />
+                <div className="ui basic segment">
+                    <h1 className="ui header">Find a Star Wars Hero</h1>
+                </div>
                 <div className="ui center aligned segment">
                     <h3 className="ui header">
                         Find a Star Wars Hero near you!

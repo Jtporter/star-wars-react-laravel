@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2422,14 +2422,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _intro_intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../intro/intro */ "./resources/js/components/intro/intro.js");
-/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../card/card */ "./resources/js/components/card/card.js");
-/* harmony import */ var _data_dummyData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../data/dummyData */ "./resources/js/data/dummyData.js");
+/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../card/card */ "./resources/js/components/card/card.js");
+/* harmony import */ var _data_dummyData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../data/dummyData */ "./resources/js/data/dummyData.js");
 
 var _jsxFileName = "/Users/p845975/Documents/php/laravel-playground/resources/js/components/home/home.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
  // COMPONENTS
-
 
  // DATA
 
@@ -2466,41 +2464,49 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "ui basic segment",
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 35
       },
       __self: this
-    }, __jsx(_intro_intro__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx("h1", {
+      className: "ui header",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 36
       },
       __self: this
-    }), __jsx("div", {
+    }, "Find a Star Wars Hero")), __jsx("div", {
       className: "ui center aligned segment",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 38
       },
       __self: this
     }, __jsx("h3", {
       className: "ui header",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 39
       },
       __self: this
     }, "Find a Star Wars Hero near you!"), __jsx("form", {
       onSubmit: this.handleSubmit,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 42
       },
       __self: this
     }, __jsx("div", {
       className: "ui action input",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, __jsx("input", {
@@ -2514,48 +2520,48 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onKeyPress: this.isNumberKey,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }), __jsx("button", {
       className: "ui blue right labeled icon button",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 54
       },
       __self: this
     }, __jsx("i", {
       className: "search icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 55
       },
       __self: this
     }), "Zip Code")))), __jsx("div", {
       className: "ui divider",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }), __jsx("div", {
       className: "ui basic segment",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 62
       },
       __self: this
     }, __jsx("div", {
       className: "ui three column stackable centered aligned grid",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: this
-    }, _data_dummyData__WEBPACK_IMPORTED_MODULE_4__["default"].map(person => __jsx(_card_card__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, person, {
+    }, _data_dummyData__WEBPACK_IMPORTED_MODULE_3__["default"].map(person => __jsx(_card_card__WEBPACK_IMPORTED_MODULE_2__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, person, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 65
       },
       __self: this
     }))))));
@@ -2564,44 +2570,6 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 } // if (document.getElementById("root")) {
 //     ReactDOM.render(<Layout />, document.getElementById("root"));
 // }
-
-/***/ }),
-
-/***/ "./resources/js/components/intro/intro.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/intro/intro.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Intro; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/p845975/Documents/php/laravel-playground/resources/js/components/intro/intro.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-class Intro extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return __jsx("div", {
-      className: "ui basic segment",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 6
-      },
-      __self: this
-    }, __jsx("h1", {
-      className: "ui header",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7
-      },
-      __self: this
-    }, "Find a Star Wars Hero"));
-  }
-
-}
 
 /***/ }),
 
@@ -2945,7 +2913,7 @@ function Layout(props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
