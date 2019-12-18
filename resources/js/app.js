@@ -13,9 +13,9 @@ require('./bootstrap');
  */
 
 // SEMANTIC
-import '../semantic/dist/semantic.min.css';
-import '../semantic/dist/semantic.js';
+import '../../public/semantic/dist/semantic.min.css';
+import '../../public/semantic/dist/semantic.js';
 import '../sass/app.scss';
 
-require('./index');
+require('./components/home/home');
 

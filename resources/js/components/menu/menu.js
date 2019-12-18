@@ -1,19 +1,21 @@
 import React, { Component } from "react";
+import Link from "next/link";
 
 export default class Menu extends Component {
     render() {
         return (
             <div className="ui attached stackable menu">
                 <div className="ui container">
-                    <a className="item">
-                        <i className="home icon"></i> Home
-                    </a>
-                    <a className="item">
-                        <i className="grid layout icon"></i> Browse
-                    </a>
-                    <a className="item">
-                        <i className="mail icon"></i> Messages
-                    </a>
+                    <Link href="/">
+                        <a className="item">
+                            <i className="home icon"></i>Home
+                        </a>
+                    </Link>
+                    <Link href="/about">
+                        <a className="item">
+                            <i className="grid layout icon"></i>About
+                        </a>
+                    </Link>
                     <div className="ui simple dropdown item">
                         More
                         <i className="dropdown icon"></i>
@@ -25,7 +27,8 @@ export default class Menu extends Component {
                                 <i className="globe icon"></i> Choose Language
                             </a>
                             <a className="item">
-                                <i className="settings icon"></i> Account Settings
+                                <i className="settings icon"></i> Account
+                                Settings
                             </a>
                         </div>
                     </div>

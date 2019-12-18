@@ -52204,9 +52204,9 @@ function (_Component) {
         maxLength: "5",
         onKeyPress: this.isNumberKey
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "ui teal right labeled icon button"
+        className: "ui blue right labeled icon button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "location arrow icon"
+        className: "search icon"
       }), "Zip Code")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ui divider"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
