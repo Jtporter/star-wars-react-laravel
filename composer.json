@@ -13,8 +13,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-        "symfony/mime": "4.3.8",
-        "symfony/http-foundation": "4.3.8"
+        "symfony/http-foundation": "4.3.8",
+        "symfony/mime": "4.3.8"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

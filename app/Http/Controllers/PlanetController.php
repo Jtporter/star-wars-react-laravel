@@ -19,4 +19,10 @@ class PlanetController extends Controller
     {
         return new PlanetResource(Planet::findOrFail($id));
     }
+
+    public function planetZipCode($zip)
+    {
+        $arr = str_split($zip);
+        return new PlanetCollection((Planet::where('planet_zip', 'LIKE', $arr[0] . '%')->get()));
+    }
 }

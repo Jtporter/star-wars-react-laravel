@@ -28,6 +28,7 @@ class Planet extends JsonResource
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'url' => $this->url,
+            'planet_zip' => $this->planet_zip,
         ];
     }
 }

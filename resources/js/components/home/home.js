@@ -1,16 +1,18 @@
 import React, { Component } from "react";
+import Link from "next/link";
+import $ from "jquery";
 // COMPONENTS
 import Card from "../card/card";
-// DATA
-import people from "../../data/dummyData";
 
 export default class Layout extends Component {
     constructor(props) {
         super(props);
-        this.state = { zip: "" };
+        this.state = { zip: "", people: [] };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.isNumberKey = this.isNumberKey.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     handleChange(event) {
@@ -27,6 +29,20 @@ export default class Layout extends Component {
         const charCode = event.which ? event.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
         return true;
+    }
+
+    componentDidMount() {
+        $.ajax({
+            url: `http://127.0.0.1:8000/api/homepage`
+        }).done(response => {
+            const { data } = response;
+            data.forEach(function(obj) {
+                obj.key = obj.id;
+            });
+            this.setState({
+                people: data
+            });
+        });
     }
 
     render() {
@@ -51,17 +67,18 @@ export default class Layout extends Component {
                                 maxLength="5"
                                 onKeyPress={this.isNumberKey}
                             ></input>
-                            <button className="ui blue right labeled icon button">
-                                <i className="search icon"></i>
-                                Zip Code
-                            </button>
+                            <Link href="/heros">
+                                <button className="ui blue right labeled icon button">
+                                    <i className="search icon"></i>Zip Code
+                                </button>
+                            </Link>
                         </div>
                     </form>
                 </div>
                 <div className="ui divider"></div>
                 <div className="ui basic segment">
                     <div className="ui three column stackable centered aligned grid">
-                        {people.map(person => (
+                        {this.state.people.map(person => (
                             <Card {...person} />
                         ))}
                     </div>

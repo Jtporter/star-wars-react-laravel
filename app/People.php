@@ -19,4 +19,11 @@ class People extends Model
             return $session->get('people')[$id];
         }
     }
+
+    public function getHomePagePeople($session)
+    {
+        if (!$session->has('people')) {
+            return $session->get('people');
+        }
+    }
 }

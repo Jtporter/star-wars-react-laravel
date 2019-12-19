@@ -1,0 +1,10 @@
+import React from "react";
+import Link from "next/link";
+
+const LinkData = ({ href, children, ...rest }) => (
+    <Link href={href}>
+      <a {...rest}>{children}</a>
+    </Link>
+  );
+
+  export default LinkData;

@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Planet;
 
 class People extends JsonResource
 {
@@ -25,9 +26,11 @@ class People extends JsonResource
             'birth_year' => $this->birth_year,
             'gender' => $this->gender,
             'planet_id' => (int) $this->planet_id,
+            'planet' => Planet::findOrFail($this->planet_id),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'url' => $this->url,
+            'image_url' => $this->image_url,
         ];
     }
 }

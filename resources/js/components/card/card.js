@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import Link from "next/link";
 
 export default class Card extends Component {
     render() {
         const {
+            id,
             name,
             height,
             mass,
@@ -12,7 +14,9 @@ export default class Card extends Component {
             birth_year,
             gender,
             planet_id,
-            url,
+            planet: {
+                name: planetName
+            },
             image_url
         } = this.props;
         const cartImgStyle = {
@@ -23,7 +27,9 @@ export default class Card extends Component {
                 <div className="ui card fluid centered">
                     <div style={cartImgStyle} className="card-image"></div>
                     <div className="content">
-                        <a href={url} className="header">{name}</a>
+                        <Link href={`/heros/${id}`}>
+                            <a className="header">{name}</a>
+                        </Link>
                         <div className="meta">
                             <span className="date">Height: {height}</span>
                         </div>
@@ -49,14 +55,12 @@ export default class Card extends Component {
                             </span>
                         </div>
                         <div className="description">
-                            Born on Planet: {planet_id}
+                            Born on Planet: {planetName}
                         </div>
                     </div>
                     <div className="extra content">
-                        <a>
-                            <i className="user icon"></i>
-                            Gender: {gender}
-                        </a>
+                        <i className="user icon"></i>
+                        Gender: {gender}
                     </div>
                 </div>
             </div>

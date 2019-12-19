@@ -20,7 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // PEOPLE
 Route::get('/people', 'PeopleController@index');
 Route::get('/people/{id}', 'PeopleController@show');
+Route::get('/homepage', 'PeopleController@homepage');
+Route::get('/people/location/{zip}', 'PeopleController@planetZipCode');
+
 
 // PLANET
 Route::get('/planet', 'PlanetController@index');
 Route::get('/planet/{id}', 'PlanetController@show');
+Route::get('/planet/location/{zip}', 'PlanetController@planetZipCode');
+
