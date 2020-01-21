@@ -4,7 +4,7 @@ import $ from "jquery";
 // COMPONENTS
 import Card from "../card/card";
 
-export default class Layout extends Component {
+export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = { zip: "", people: [] };
@@ -65,9 +65,9 @@ export default class Layout extends Component {
                                 onChange={this.handleChange}
                                 pattern="\d*"
                                 maxLength="5"
-                                onKeyPress={this.isNumberKey}
+                                // onKeyPress={this.isNumberKey}
                             ></input>
-                            <Link href="/heros">
+                            <Link href={{ pathname: `heros`, query: { zip: this.state.value }}}>
                                 <button className="ui blue right labeled icon button">
                                     <i className="search icon"></i>Zip Code
                                 </button>
@@ -87,7 +87,3 @@ export default class Layout extends Component {
         );
     }
 }
-
-// if (document.getElementById("root")) {
-//     ReactDOM.render(<Layout />, document.getElementById("root"));
-// }

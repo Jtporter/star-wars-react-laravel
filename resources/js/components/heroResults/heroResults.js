@@ -6,37 +6,67 @@ import $ from "jquery";
 // COMPONENTS
 import Card from "../card/card";
 
-class Hero extends Component {
+class HeroResults extends Component {
     constructor(props) {
         super(props);
         const {
             router: {
-                query: { id }
+                query: { zip }
             }
         } = Router;
         let url = `http://127.0.0.1:8000/api/people`;
-        console.log(router);
-        id ? (url = `${url}/${id}`) : url;
-        this.state = { people: [], url };
+        zip === ""
+            ? (url = `${url}/location/${this.state.zip}`)
+            : url;
+
+        this.state = { people: [], zip, message: "", url };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
         this.getPeopleByZip = this.getPeopleByZip.bind(this);
     }
 
-    static async getInitialProps () {
-        return {}
-      }
+    handleChange(event) {
+        this.setState({ value: event.target.value });
+    }
+
+    handleSubmit(event) {
+        alert("An essay was submitted: " + this.state.value);
+        event.preventDefault();
+    }
 
     getPeopleByZip = () => {
-        console.log(this.state.url);
         $.ajax({
             url: this.state.url
         }).done(response => {
             const { data } = response;
-            data.key = data.id;
+            data.forEach(function(obj) {
+                obj.key = obj.id;
+            });
             this.setState({
                 people: data
             });
         });
     };
+
+    componentDidMount() {
+        function setMessage(msg) {
+            return (
+                <div className="ui visible message">
+                    <p>{msg}</p>
+                </div>
+            );
+        }
+
+        this.state.message = !this.state.zip
+            ? setMessage("Seeing All")
+            : setMessage(
+                  `Seeing heros close to planet zip code ${this.state.zip}`
+              );
+
+        this.getPeopleByZip();
+    }
 
     render() {
         return (
@@ -51,12 +81,12 @@ class Hero extends Component {
                     </div>
                     <div className="right item">
                         <div className="ui action input">
-                            {/* <input
+                            <input
                                 type="text"
                                 value={this.state.zip}
                                 onChange={() => ""}
                                 placeholder="Planet zip code..."
-                            ></input> */}
+                            ></input>
                             <div className="ui blue button">Go</div>
                         </div>
                     </div>
@@ -74,4 +104,4 @@ class Hero extends Component {
     }
 }
 
-export default withRouter(Hero);
+export default withRouter(HeroResults);

@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+
 // COMPONENTS
 import Menu from "./components/menu/menu";
 
@@ -7,7 +8,7 @@ export default function Layout(props) {
     return (
         <div>
             <Head>
-                <meta charset="utf-8"></meta>
+                <meta charSet="utf-8"></meta>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1"
@@ -22,7 +23,7 @@ export default function Layout(props) {
                 <script
                     src="https://code.jquery.com/jquery-3.1.1.min.js"
                     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-                    crossorigin="anonymous"
+                    crossOrigin="anonymous"
                 ></script>
                 <script src="./semantic/dist/semantic.js"></script>
             </Head>

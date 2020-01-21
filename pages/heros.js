@@ -1,11 +1,11 @@
 // COMPONENTS
 import Layout from "../resources/js/layout";
-import Hero from "../resources/js/components/hero/hero";
+import HeroResults from "../resources/js/components/heroResults/heroResults";
 
 const Heros = () => (
     <Layout>
-        <Hero />
+        <HeroResults />
     </Layout>
 );
 
-export default Heros;
+export default HeroResults;
